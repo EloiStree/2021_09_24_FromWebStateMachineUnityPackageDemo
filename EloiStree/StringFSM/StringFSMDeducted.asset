@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56adc786d22960d45853f449eb5b7382, type: 3}
+  m_Name: StringFSMDeducted
+  m_EditorClassIdentifier: 
+  m_source: {fileID: 11400000, guid: 228dbd47473d90440b575b7c3ee48ccd, type: 2}
+  m_uintIndexes:
+    m_statesCount: 6
+    m_transactionsCount: 15
+    m_transitionsAsIndex:
+    - m_transitionId: 0
+      m_sourceStateId: 0
+      m_destinationStateId: 1
+    - m_transitionId: 1
+      m_sourceStateId: 2
+      m_destinationStateId: 1
+    - m_transitionId: 2
+      m_sourceStateId: 0
+      m_destinationStateId: 2
+    - m_transitionId: 3
+      m_sourceStateId: 1
+      m_destinationStateId: 2
+    - m_transitionId: 4
+      m_sourceStateId: 0
+      m_destinationStateId: 3
+    - m_transitionId: 5
+      m_sourceStateId: 1
+      m_destinationStateId: 3
+    - m_transitionId: 6
+      m_sourceStateId: 2
+      m_destinationStateId: 3
+    - m_transitionId: 7
+      m_sourceStateId: 3
+      m_destinationStateId: 4
+    - m_transitionId: 8
+      m_sourceStateId: 3
+      m_destinationStateId: 5
+    - m_transitionId: 9
+      m_sourceStateId: 4
+      m_destinationStateId: 5
+    - m_transitionId: 10
+      m_sourceStateId: 1
+      m_destinationStateId: 0
+    - m_transitionId: 11
+      m_sourceStateId: 2
+      m_destinationStateId: 0
+    - m_transitionId: 12
+      m_sourceStateId: 3
+      m_destinationStateId: 0
+    - m_transitionId: 13
+      m_sourceStateId: 4
+      m_destinationStateId: 0
+    - m_transitionId: 14
+      m_sourceStateId: 5
+      m_destinationStateId: 0
+  m_stringIdNeighborPerState:
+    m_listOfStateNeighbor:
+    - m_stateId: idle
+      m_stateDestination:
+      - walk
+      - run
+      - jump
+      m_transitionDestination:
+      - walking
+      - running
+      - jump
+      m_transitionSource:
+      - stop
+      - airstop
+      m_stateSource:
+      - walk
+      - run
+      - jump
+      - doublejump
+      - falling
+    - m_stateId: walk
+      m_stateDestination:
+      - run
+      - jump
+      - idle
+      m_transitionDestination:
+      - running
+      - jump
+      - stop
+      m_transitionSource:
+      - walking
+      m_stateSource:
+      - idle
+      - run
+    - m_stateId: run
+      m_stateDestination:
+      - walk
+      - jump
+      - idle
+      m_transitionDestination:
+      - walking
+      - jump
+      - stop
+      m_transitionSource:
+      - running
+      m_stateSource:
+      - idle
+      - walk
+    - m_stateId: jump
+      m_stateDestination:
+      - doublejump
+      - falling
+      - idle
+      m_transitionDestination:
+      - jump
+      - falling
+      - airstop
+      m_transitionSource:
+      - jump
+      m_stateSource:
+      - idle
+      - walk
+      - run
+    - m_stateId: doublejump
+      m_stateDestination:
+      - falling
+      - idle
+      m_transitionDestination:
+      - falling
+      - airstop
+      m_transitionSource:
+      - jump
+      m_stateSource:
+      - jump
+    - m_stateId: falling
+      m_stateDestination:
+      - idle
+      m_transitionDestination:
+      - airstop
+      m_transitionSource:
+      - falling
+      m_stateSource:
+      - jump
+      - doublejump
+  m_uintIndexNeighborPerState:
+    m_listOfStateNeighbor:
+    - m_stateId: 0
+      m_stateDestination: 010000000200000003000000
+      m_transitionDestination: 000000000200000004000000
+      m_transitionSource: 0a0000000b0000000c0000000d0000000e000000
+      m_stateSource: 0100000002000000030000000400000005000000
+    - m_stateId: 1
+      m_stateDestination: 020000000300000000000000
+      m_transitionDestination: 03000000050000000a000000
+      m_transitionSource: 0000000001000000
+      m_stateSource: 0000000002000000
+    - m_stateId: 2
+      m_stateDestination: 010000000300000000000000
+      m_transitionDestination: 01000000060000000b000000
+      m_transitionSource: 0200000003000000
+      m_stateSource: 0000000001000000
+    - m_stateId: 3
+      m_stateDestination: 040000000500000000000000
+      m_transitionDestination: 07000000080000000c000000
+      m_transitionSource: 040000000500000006000000
+      m_stateSource: 000000000100000002000000
+    - m_stateId: 4
+      m_stateDestination: 0500000000000000
+      m_transitionDestination: 090000000d000000
+      m_transitionSource: 07000000
+      m_stateSource: 03000000
+    - m_stateId: 5
+      m_stateDestination: 00000000
+      m_transitionDestination: 0e000000
+      m_transitionSource: 0800000009000000
+      m_stateSource: 0300000004000000
+  m_transactionsCollision:
+    m_uniqueTransitions:
+    - walking
+    - running
+    - jump
+    - falling
+    - stop
+    - airstop
+    m_transactionsNameToIndexes:
+    - m_transactionName: walking
+      m_transactionIndexIds: 0000000001000000
+    - m_transactionName: running
+      m_transactionIndexIds: 0200000003000000
+    - m_transactionName: jump
+      m_transactionIndexIds: 04000000050000000600000007000000
+    - m_transactionName: falling
+      m_transactionIndexIds: 0800000009000000
+    - m_transactionName: stop
+      m_transactionIndexIds: 0a0000000b000000
+    - m_transactionName: airstop
+      m_transactionIndexIds: 0c0000000d0000000e000000
