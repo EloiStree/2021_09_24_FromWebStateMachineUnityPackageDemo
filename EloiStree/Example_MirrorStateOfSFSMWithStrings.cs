@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeleteMe_MirrorStateToPlayer : MonoBehaviour
+public class Example_MirrorStateOfSFSMWithStrings : MonoBehaviour
 {
     public BooleanStringStateMachineMono m_source;
     public Transform m_direction;

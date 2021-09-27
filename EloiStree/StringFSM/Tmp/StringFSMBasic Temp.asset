@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2abf6bdee489a41bb4789cf5f43a0e, type: 3}
+  m_Name: StringFSMBasic Temp
+  m_EditorClassIdentifier: 
+  m_stringFSM:
+    m_machineName: playermove
+    m_initialState: idle
+    m_states:
+      m_states:
+      - idle
+      - walk
+      - run
+      - jump
+      - doublejump
+      - falling
+    m_transactions:
+      m_transactions:
+      - m_transactionTriggerName: walking
+        m_transactionSource: idle
+        m_transactionDestination: walk
+      - m_transactionTriggerName: running
+        m_transactionSource: idle
+        m_transactionDestination: run
+      - m_transactionTriggerName: jump
+        m_transactionSource: idle
+        m_transactionDestination: jump
+      - m_transactionTriggerName: running
+        m_transactionSource: walk
+        m_transactionDestination: run
+      - m_transactionTriggerName: jump
+        m_transactionSource: walk
+        m_transactionDestination: jump
+      - m_transactionTriggerName: stop
+        m_transactionSource: walk
+        m_transactionDestination: idle
+      - m_transactionTriggerName: walking
+        m_transactionSource: run
+        m_transactionDestination: walk
+      - m_transactionTriggerName: jump
+        m_transactionSource: run
+        m_transactionDestination: jump
+      - m_transactionTriggerName: stop
+        m_transactionSource: run
+        m_transactionDestination: idle
+      - m_transactionTriggerName: jump
+        m_transactionSource: jump
+        m_transactionDestination: doublejump
+      - m_transactionTriggerName: falling
+        m_transactionSource: jump
+        m_transactionDestination: falling
+      - m_transactionTriggerName: airstop
+        m_transactionSource: jump
+        m_transactionDestination: idle
+      - m_transactionTriggerName: falling
+        m_transactionSource: doublejump
+        m_transactionDestination: falling
+      - m_transactionTriggerName: airstop
+        m_transactionSource: doublejump
+        m_transactionDestination: idle
+      - m_transactionTriggerName: airstop
+        m_transactionSource: falling
+        m_transactionDestination: idle

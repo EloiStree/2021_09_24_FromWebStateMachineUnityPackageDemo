@@ -149,35 +149,35 @@ MonoBehaviour:
   m_uintIndexNeighborPerState:
     m_listOfStateNeighbor:
     - m_stateId: 0
-      m_stateDestination: 010000000200000003000000
-      m_transitionDestination: 000000000200000004000000
-      m_transitionSource: 0a0000000b0000000c0000000d0000000e000000
-      m_stateSource: 0100000002000000030000000400000005000000
+      m_stateDestination: 010203
+      m_transitionDestination: 000204
+      m_transitionSource: 0a0b0c0d0e
+      m_stateSource: 0102030405
     - m_stateId: 1
-      m_stateDestination: 020000000300000000000000
-      m_transitionDestination: 03000000050000000a000000
-      m_transitionSource: 0000000001000000
-      m_stateSource: 0000000002000000
+      m_stateDestination: 020300
+      m_transitionDestination: 03050a
+      m_transitionSource: 0001
+      m_stateSource: 0002
     - m_stateId: 2
-      m_stateDestination: 010000000300000000000000
-      m_transitionDestination: 01000000060000000b000000
-      m_transitionSource: 0200000003000000
-      m_stateSource: 0000000001000000
+      m_stateDestination: 010300
+      m_transitionDestination: 01060b
+      m_transitionSource: 0203
+      m_stateSource: 0001
     - m_stateId: 3
-      m_stateDestination: 040000000500000000000000
-      m_transitionDestination: 07000000080000000c000000
-      m_transitionSource: 040000000500000006000000
-      m_stateSource: 000000000100000002000000
+      m_stateDestination: 040500
+      m_transitionDestination: 07080c
+      m_transitionSource: 040506
+      m_stateSource: 000102
     - m_stateId: 4
-      m_stateDestination: 0500000000000000
-      m_transitionDestination: 090000000d000000
-      m_transitionSource: 07000000
-      m_stateSource: 03000000
+      m_stateDestination: 0500
+      m_transitionDestination: 090d
+      m_transitionSource: 07
+      m_stateSource: 03
     - m_stateId: 5
-      m_stateDestination: 00000000
-      m_transitionDestination: 0e000000
-      m_transitionSource: 0800000009000000
-      m_stateSource: 0300000004000000
+      m_stateDestination: 00
+      m_transitionDestination: 0e
+      m_transitionSource: 0809
+      m_stateSource: 0304
   m_transactionsCollision:
     m_uniqueTransitions:
     - walking
@@ -188,14 +188,14 @@ MonoBehaviour:
     - airstop
     m_transactionsNameToIndexes:
     - m_transactionName: walking
-      m_transactionIndexIds: 0000000001000000
+      m_transactionIndexIds: 0001
     - m_transactionName: running
-      m_transactionIndexIds: 0200000003000000
+      m_transactionIndexIds: 0203
     - m_transactionName: jump
-      m_transactionIndexIds: 04000000050000000600000007000000
+      m_transactionIndexIds: 04050607
     - m_transactionName: falling
-      m_transactionIndexIds: 0800000009000000
+      m_transactionIndexIds: 0809
     - m_transactionName: stop
-      m_transactionIndexIds: 0a0000000b000000
+      m_transactionIndexIds: 0a0b
     - m_transactionName: airstop
-      m_transactionIndexIds: 0c0000000d0000000e000000
+      m_transactionIndexIds: 0c0d0e
