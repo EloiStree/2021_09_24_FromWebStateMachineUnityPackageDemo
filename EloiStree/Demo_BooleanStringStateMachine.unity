@@ -913,6 +913,8 @@ MonoBehaviour:
 
     walk>running>run
 
+    walk>running>idle
+
     walk>jump>jump
 
     walk>stop>idle
