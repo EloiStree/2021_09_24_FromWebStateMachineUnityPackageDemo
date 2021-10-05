@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56adc786d22960d45853f449eb5b7382, type: 3}
-  m_Name: StringFSMDeducted
+  m_Name: StringFSMDeducted PlayerJump
   m_EditorClassIdentifier: 
   m_source: {fileID: 11400000, guid: 228dbd47473d90440b575b7c3ee48ccd, type: 2}
   m_uintIndexes:
