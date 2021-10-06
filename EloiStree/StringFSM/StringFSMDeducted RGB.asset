@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56adc786d22960d45853f449eb5b7382, type: 3}
+  m_Name: StringFSMDeducted RGB
+  m_EditorClassIdentifier: 
+  m_source: {fileID: 11400000, guid: 29ecfbd8d91e6d34193f902bb9879baf, type: 2}
+  m_uintIndexes:
+    m_statesCount: 5
+    m_transactionsCount: 10
+    m_transitionsAsIndex:
+    - m_transitionId: 0
+      m_sourceStateId: 1
+      m_destinationStateId: 0
+    - m_transitionId: 1
+      m_sourceStateId: 0
+      m_destinationStateId: 0
+    - m_transitionId: 2
+      m_sourceStateId: 2
+      m_destinationStateId: 1
+    - m_transitionId: 3
+      m_sourceStateId: 0
+      m_destinationStateId: 1
+    - m_transitionId: 4
+      m_sourceStateId: 0
+      m_destinationStateId: 2
+    - m_transitionId: 5
+      m_sourceStateId: 1
+      m_destinationStateId: 2
+    - m_transitionId: 6
+      m_sourceStateId: 4
+      m_destinationStateId: 2
+    - m_transitionId: 7
+      m_sourceStateId: 4
+      m_destinationStateId: 1
+    - m_transitionId: 8
+      m_sourceStateId: 4
+      m_destinationStateId: 0
+    - m_transitionId: 9
+      m_sourceStateId: 3
+      m_destinationStateId: 4
+  m_stringIdNeighborPerState:
+    m_listOfStateNeighbor:
+    - m_stateId: Red
+      m_stateDestination:
+      - Red
+      - Green
+      - Blue
+      m_transitionDestination:
+      - SetRed
+      - SetGreen
+      - SetBlue
+      m_transitionSource:
+      - SetRed
+      m_stateSource:
+      - Green
+      - Red
+      - Black
+    - m_stateId: Green
+      m_stateDestination:
+      - Red
+      - Blue
+      m_transitionDestination:
+      - SetRed
+      - SetBlue
+      m_transitionSource:
+      - SetGreen
+      m_stateSource:
+      - Blue
+      - Red
+      - Black
+    - m_stateId: Blue
+      m_stateDestination:
+      - Green
+      m_transitionDestination:
+      - SetGreen
+      m_transitionSource:
+      - SetBlue
+      m_stateSource:
+      - Red
+      - Green
+      - Black
+    - m_stateId: White
+      m_stateDestination:
+      - Black
+      m_transitionDestination:
+      - SetBlack
+      m_transitionSource: []
+      m_stateSource: []
+    - m_stateId: Black
+      m_stateDestination:
+      - Blue
+      - Green
+      - Red
+      m_transitionDestination:
+      - SetBlue
+      - SetGreen
+      - SetRed
+      m_transitionSource:
+      - SetBlack
+      m_stateSource:
+      - White
+  m_uintIndexNeighborPerState:
+    m_listOfStateNeighbor:
+    - m_stateId: 0
+      m_stateDestination: 000102
+      m_transitionDestination: 010304
+      m_transitionSource: 000108
+      m_stateSource: 010004
+    - m_stateId: 1
+      m_stateDestination: 0002
+      m_transitionDestination: 0005
+      m_transitionSource: 020307
+      m_stateSource: 020004
+    - m_stateId: 2
+      m_stateDestination: 01
+      m_transitionDestination: 02
+      m_transitionSource: 040506
+      m_stateSource: 000104
+    - m_stateId: 3
+      m_stateDestination: 04
+      m_transitionDestination: 09
+      m_transitionSource: 
+      m_stateSource: 
+    - m_stateId: 4
+      m_stateDestination: 020100
+      m_transitionDestination: 060708
+      m_transitionSource: 09
+      m_stateSource: 03
+  m_transactionsCollision:
+    m_uniqueTransitions:
+    - SetRed
+    - SetGreen
+    - SetBlue
+    - SetBlack
+    m_transactionsNameToIndexes:
+    - m_transactionName: SetRed
+      m_transactionIndexIds: 000108
+    - m_transactionName: SetGreen
+      m_transactionIndexIds: 020307
+    - m_transactionName: SetBlue
+      m_transactionIndexIds: 040506
+    - m_transactionName: SetBlack
+      m_transactionIndexIds: 09
