@@ -22,6 +22,7 @@ MonoBehaviour:
       - Blue
       - White
       - Black
+      - Bluatre
     m_transactions:
       m_transactions:
       - m_transactionTriggerName: SetRed
@@ -54,3 +55,9 @@ MonoBehaviour:
       - m_transactionTriggerName: SetBlack
         m_transactionSource: White
         m_transactionDestination: Black
+      - m_transactionTriggerName: SpecialColor
+        m_transactionSource: Blue
+        m_transactionDestination: Bluatre
+      - m_transactionTriggerName: ClassicColor
+        m_transactionSource: Bluatre
+        m_transactionDestination: Blue

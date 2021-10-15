@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,168 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &164262545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 164262546}
+  - component: {fileID: 164262547}
+  m_Layer: 0
+  m_Name: Any to State Enter Observer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &164262546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164262545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1739383189}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &164262547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164262545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763a291c4aa737048a9275fd10e3dd6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_target: {fileID: 780283627}
+  m_listenToStateEntering:
+    m_observeStateId: 0
+    m_isEnteredState: 0
+  m_previousState: 0
+  m_stateChangeBytes:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1889690360}
+        m_TargetAssemblyTypeName: ColorStateChangeListenerMono, Assembly-CSharp
+        m_MethodName: OnStateIndexChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_warning:
+    m_whyInfo: This class has the problem of check every update the state of the
+      machine. It works but can kill performance if too mush of them.
+  m_warning2:
+    m_whyInfo: Observe a state byte don't provide the event of transition on the
+      same state.
+--- !u!1 &591615914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591615915}
+  - component: {fileID: 591615918}
+  - component: {fileID: 591615917}
+  - component: {fileID: 591615916}
+  m_Layer: 5
+  m_Name: Image (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &591615915
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591615914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1716733477}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &591615916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591615914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fdfdf6723798864da1362a8c40eb2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_imgageToAffect: {fileID: 591615917}
+  m_colorCurrent: 0
+  m_colorPrevious: 0
+  m_source: {fileID: 0}
+  m_stateReceived: 0
+--- !u!114 &591615917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591615914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &591615918
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591615914}
+  m_CullTransparentMesh: 1
 --- !u!1 &608852226
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,83 +318,101 @@ MonoBehaviour:
   m_asEnums: '
 
     public enum S_RGBSTATEMACHINE : byte {RED = 0, GREEN = 1, BLUE
-    = 2, WHITE = 3, BLACK = 4}
+    = 2, WHITE = 3, BLACK = 4, BLUATRE = 5}
 
-    public enum T_RGBSTATEMACHINE : byte{SETRED_GREEN_RED
-    = 0, SETRED_RED_RED = 1, SETGREEN_BLUE_GREEN = 2, SETGREEN_RED_GREEN = 3, SETBLUE_RED_BLUE
-    = 4, SETBLUE_GREEN_BLUE = 5, SETBLUE_BLACK_BLUE = 6, SETGREEN_BLACK_GREEN = 7,
-    SETRED_BLACK_RED = 8, SETBLACK_WHITE_BLACK = 9}'
+    public enum T_RGBSTATEMACHINE :
+    byte{SETRED_GREEN_RED = 0, SETRED_RED_RED = 1, SETGREEN_BLUE_GREEN = 2, SETGREEN_RED_GREEN
+    = 3, SETBLUE_RED_BLUE = 4, SETBLUE_GREEN_BLUE = 5, SETBLUE_BLACK_BLUE = 6, SETGREEN_BLACK_GREEN
+    = 7, SETRED_BLACK_RED = 8, SETBLACK_WHITE_BLACK = 9, SPECIALCOLOR_BLUE_BLUATRE
+    = 10, CLASSICCOLOR_BLUATRE_BLUE = 11}'
   m_asConst: "//*\n\npublic partial class SFSM {\n\tpublic const byte S_RGBSTATEMACHINE_RED
     = 0;\n\tpublic const byte S_RGBSTATEMACHINE_GREEN = 1;\n\tpublic const byte S_RGBSTATEMACHINE_BLUE
     = 2;\n\tpublic const byte S_RGBSTATEMACHINE_WHITE = 3;\n\tpublic const byte S_RGBSTATEMACHINE_BLACK
-    = 4;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_GREEN_RED = 0;\n\tpublic const
-    byte T_RGBSTATEMACHINE_SETRED_RED_RED = 1;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_BLUE_GREEN
-    = 2;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_RED_GREEN = 3;\n\tpublic
-    const byte T_RGBSTATEMACHINE_SETBLUE_RED_BLUE = 4;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_GREEN_BLUE
-    = 5;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_BLACK_BLUE = 6;\n\tpublic
-    const byte T_RGBSTATEMACHINE_SETGREEN_BLACK_GREEN = 7;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_BLACK_RED
-    = 8;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLACK_WHITE_BLACK = 9;\n}\n//*/\n\n//*\n\npublic
+    = 4;\n\tpublic const byte S_RGBSTATEMACHINE_BLUATRE = 5;\n\tpublic const byte
+    T_RGBSTATEMACHINE_SETRED_GREEN_RED = 0;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_RED_RED
+    = 1;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_BLUE_GREEN = 2;\n\tpublic
+    const byte T_RGBSTATEMACHINE_SETGREEN_RED_GREEN = 3;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_RED_BLUE
+    = 4;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_GREEN_BLUE = 5;\n\tpublic
+    const byte T_RGBSTATEMACHINE_SETBLUE_BLACK_BLUE = 6;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_BLACK_GREEN
+    = 7;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_BLACK_RED = 8;\n\tpublic const
+    byte T_RGBSTATEMACHINE_SETBLACK_WHITE_BLACK = 9;\n\tpublic const byte T_RGBSTATEMACHINE_SPECIALCOLOR_BLUE_BLUATRE
+    = 10;\n\tpublic const byte T_RGBSTATEMACHINE_CLASSICCOLOR_BLUATRE_BLUE = 11;\n}\n//*/\n\n//*\n\npublic
     partial class SFSM {\n\n\tpublic static class RGBSTATEMACHINE{\n\t\tpublic const
     byte S_RED = 0;\n\t\tpublic const byte S_GREEN = 1;\n\t\tpublic const byte S_BLUE
     = 2;\n\t\tpublic const byte S_WHITE = 3;\n\t\tpublic const byte S_BLACK = 4;\n\t\tpublic
-    const byte T_SETRED_GREEN_RED = 0;\n\t\tpublic const byte T_SETRED_RED_RED =
-    1;\n\t\tpublic const byte T_SETGREEN_BLUE_GREEN = 2;\n\t\tpublic const byte T_SETGREEN_RED_GREEN
-    = 3;\n\t\tpublic const byte T_SETBLUE_RED_BLUE = 4;\n\t\tpublic const byte T_SETBLUE_GREEN_BLUE
-    = 5;\n\t\tpublic const byte T_SETBLUE_BLACK_BLUE = 6;\n\t\tpublic const byte
-    T_SETGREEN_BLACK_GREEN = 7;\n\t\tpublic const byte T_SETRED_BLACK_RED = 8;\n\t\tpublic
-    const byte T_SETBLACK_WHITE_BLACK = 9;\n\t}\n}\n//*/"
+    const byte S_BLUATRE = 5;\n\t\tpublic const byte T_SETRED_GREEN_RED = 0;\n\t\tpublic
+    const byte T_SETRED_RED_RED = 1;\n\t\tpublic const byte T_SETGREEN_BLUE_GREEN
+    = 2;\n\t\tpublic const byte T_SETGREEN_RED_GREEN = 3;\n\t\tpublic const byte
+    T_SETBLUE_RED_BLUE = 4;\n\t\tpublic const byte T_SETBLUE_GREEN_BLUE = 5;\n\t\tpublic
+    const byte T_SETBLUE_BLACK_BLUE = 6;\n\t\tpublic const byte T_SETGREEN_BLACK_GREEN
+    = 7;\n\t\tpublic const byte T_SETRED_BLACK_RED = 8;\n\t\tpublic const byte T_SETBLACK_WHITE_BLACK
+    = 9;\n\t\tpublic const byte T_SPECIALCOLOR_BLUE_BLUATRE = 10;\n\t\tpublic const
+    byte T_CLASSICCOLOR_BLUATRE_BLUE = 11;\n\t}\n}\n//*/"
   m_asConstCallClass: "\n\npublic class SFSM_RGBSTATEMACHINE : SFSM_IRGBSTATEMACHINE
     {\n\tpublic void ForceChangeToRED(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
     void ForceChangeToGREEN(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
     void ForceChangeToBLUE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
     void ForceChangeToWHITE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
-    void ForceChangeToBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
+    void ForceChangeToBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
+    void ForceChangeToBLUATRE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
     void TryTransitionThrowSETRED(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
     void TryTransitionThrowSETGREEN(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
     void TryTransitionThrowSETBLUE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
-    void TryTransitionThrowSETBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\t\n\n}\n"
+    void TryTransitionThrowSETBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
+    void TryTransitionThrowSPECIALCOLOR(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
+    void TryTransitionThrowCLASSICCOLOR(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\t\n\n}\n"
   m_asInterface: "\n\npublic interface SFSM_IRGBSTATEMACHINE {\n\tvoid ForceChangeToRED();\n\tvoid
     ForceChangeToGREEN();\n\tvoid ForceChangeToBLUE();\n\tvoid ForceChangeToWHITE();\n\tvoid
-    ForceChangeToBLACK();\n\t\n\n\tvoid TryTransitionThrowSETRED();\n\tvoid TryTransitionThrowSETGREEN();\n\tvoid
-    TryTransitionThrowSETBLUE();\n\tvoid TryTransitionThrowSETBLACK();\n\t\n\n}\n"
+    ForceChangeToBLACK();\n\tvoid ForceChangeToBLUATRE();\n\t\n\n\tvoid TryTransitionThrowSETRED();\n\tvoid
+    TryTransitionThrowSETGREEN();\n\tvoid TryTransitionThrowSETBLUE();\n\tvoid TryTransitionThrowSETBLACK();\n\tvoid
+    TryTransitionThrowSPECIALCOLOR();\n\tvoid TryTransitionThrowCLASSICCOLOR();\n\t\n\n}\n"
   m_concatOfAll: "\npublic enum S_RGBSTATEMACHINE : byte {RED = 0, GREEN = 1, BLUE
-    = 2, WHITE = 3, BLACK = 4}\npublic enum T_RGBSTATEMACHINE : byte{SETRED_GREEN_RED
+    = 2, WHITE = 3, BLACK = 4, BLUATRE = 5}\npublic enum T_RGBSTATEMACHINE : byte{SETRED_GREEN_RED
     = 0, SETRED_RED_RED = 1, SETGREEN_BLUE_GREEN = 2, SETGREEN_RED_GREEN = 3, SETBLUE_RED_BLUE
     = 4, SETBLUE_GREEN_BLUE = 5, SETBLUE_BLACK_BLUE = 6, SETGREEN_BLACK_GREEN = 7,
-    SETRED_BLACK_RED = 8, SETBLACK_WHITE_BLACK = 9}\n\n//--------------------\n\n\n\npublic
-    interface SFSM_IRGBSTATEMACHINE {\n\tvoid ForceChangeToRED();\n\tvoid ForceChangeToGREEN();\n\tvoid
-    ForceChangeToBLUE();\n\tvoid ForceChangeToWHITE();\n\tvoid ForceChangeToBLACK();\n\t\n\n\tvoid
-    TryTransitionThrowSETRED();\n\tvoid TryTransitionThrowSETGREEN();\n\tvoid TryTransitionThrowSETBLUE();\n\tvoid
-    TryTransitionThrowSETBLACK();\n\t\n\n}\n\n\n//--------------------\n\n//*\n\npublic
+    SETRED_BLACK_RED = 8, SETBLACK_WHITE_BLACK = 9, SPECIALCOLOR_BLUE_BLUATRE = 10,
+    CLASSICCOLOR_BLUATRE_BLUE = 11}\n\n//--------------------\n\n\n\npublic interface
+    SFSM_IRGBSTATEMACHINE {\n\tvoid ForceChangeToRED();\n\tvoid ForceChangeToGREEN();\n\tvoid
+    ForceChangeToBLUE();\n\tvoid ForceChangeToWHITE();\n\tvoid ForceChangeToBLACK();\n\tvoid
+    ForceChangeToBLUATRE();\n\t\n\n\tvoid TryTransitionThrowSETRED();\n\tvoid TryTransitionThrowSETGREEN();\n\tvoid
+    TryTransitionThrowSETBLUE();\n\tvoid TryTransitionThrowSETBLACK();\n\tvoid TryTransitionThrowSPECIALCOLOR();\n\tvoid
+    TryTransitionThrowCLASSICCOLOR();\n\t\n\n}\n\n\n//--------------------\n\n//*\n\npublic
     partial class SFSM {\n\tpublic const byte S_RGBSTATEMACHINE_RED = 0;\n\tpublic
     const byte S_RGBSTATEMACHINE_GREEN = 1;\n\tpublic const byte S_RGBSTATEMACHINE_BLUE
     = 2;\n\tpublic const byte S_RGBSTATEMACHINE_WHITE = 3;\n\tpublic const byte S_RGBSTATEMACHINE_BLACK
-    = 4;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_GREEN_RED = 0;\n\tpublic const
-    byte T_RGBSTATEMACHINE_SETRED_RED_RED = 1;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_BLUE_GREEN
-    = 2;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_RED_GREEN = 3;\n\tpublic
-    const byte T_RGBSTATEMACHINE_SETBLUE_RED_BLUE = 4;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_GREEN_BLUE
-    = 5;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_BLACK_BLUE = 6;\n\tpublic
-    const byte T_RGBSTATEMACHINE_SETGREEN_BLACK_GREEN = 7;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_BLACK_RED
-    = 8;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLACK_WHITE_BLACK = 9;\n}\n//*/\n\n//*\n\npublic
+    = 4;\n\tpublic const byte S_RGBSTATEMACHINE_BLUATRE = 5;\n\tpublic const byte
+    T_RGBSTATEMACHINE_SETRED_GREEN_RED = 0;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_RED_RED
+    = 1;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_BLUE_GREEN = 2;\n\tpublic
+    const byte T_RGBSTATEMACHINE_SETGREEN_RED_GREEN = 3;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_RED_BLUE
+    = 4;\n\tpublic const byte T_RGBSTATEMACHINE_SETBLUE_GREEN_BLUE = 5;\n\tpublic
+    const byte T_RGBSTATEMACHINE_SETBLUE_BLACK_BLUE = 6;\n\tpublic const byte T_RGBSTATEMACHINE_SETGREEN_BLACK_GREEN
+    = 7;\n\tpublic const byte T_RGBSTATEMACHINE_SETRED_BLACK_RED = 8;\n\tpublic const
+    byte T_RGBSTATEMACHINE_SETBLACK_WHITE_BLACK = 9;\n\tpublic const byte T_RGBSTATEMACHINE_SPECIALCOLOR_BLUE_BLUATRE
+    = 10;\n\tpublic const byte T_RGBSTATEMACHINE_CLASSICCOLOR_BLUATRE_BLUE = 11;\n}\n//*/\n\n//*\n\npublic
     partial class SFSM {\n\n\tpublic static class RGBSTATEMACHINE{\n\t\tpublic const
     byte S_RED = 0;\n\t\tpublic const byte S_GREEN = 1;\n\t\tpublic const byte S_BLUE
     = 2;\n\t\tpublic const byte S_WHITE = 3;\n\t\tpublic const byte S_BLACK = 4;\n\t\tpublic
-    const byte T_SETRED_GREEN_RED = 0;\n\t\tpublic const byte T_SETRED_RED_RED =
-    1;\n\t\tpublic const byte T_SETGREEN_BLUE_GREEN = 2;\n\t\tpublic const byte T_SETGREEN_RED_GREEN
-    = 3;\n\t\tpublic const byte T_SETBLUE_RED_BLUE = 4;\n\t\tpublic const byte T_SETBLUE_GREEN_BLUE
-    = 5;\n\t\tpublic const byte T_SETBLUE_BLACK_BLUE = 6;\n\t\tpublic const byte
-    T_SETGREEN_BLACK_GREEN = 7;\n\t\tpublic const byte T_SETRED_BLACK_RED = 8;\n\t\tpublic
-    const byte T_SETBLACK_WHITE_BLACK = 9;\n\t}\n}\n//*/\n\n//--------------------\n\n\n\npublic
+    const byte S_BLUATRE = 5;\n\t\tpublic const byte T_SETRED_GREEN_RED = 0;\n\t\tpublic
+    const byte T_SETRED_RED_RED = 1;\n\t\tpublic const byte T_SETGREEN_BLUE_GREEN
+    = 2;\n\t\tpublic const byte T_SETGREEN_RED_GREEN = 3;\n\t\tpublic const byte
+    T_SETBLUE_RED_BLUE = 4;\n\t\tpublic const byte T_SETBLUE_GREEN_BLUE = 5;\n\t\tpublic
+    const byte T_SETBLUE_BLACK_BLUE = 6;\n\t\tpublic const byte T_SETGREEN_BLACK_GREEN
+    = 7;\n\t\tpublic const byte T_SETRED_BLACK_RED = 8;\n\t\tpublic const byte T_SETBLACK_WHITE_BLACK
+    = 9;\n\t\tpublic const byte T_SPECIALCOLOR_BLUE_BLUATRE = 10;\n\t\tpublic const
+    byte T_CLASSICCOLOR_BLUATRE_BLUE = 11;\n\t}\n}\n//*/\n\n//--------------------\n\n\n\npublic
     class SFSM_RGBSTATEMACHINE : SFSM_IRGBSTATEMACHINE {\n\tpublic void ForceChangeToRED(){\n\t//Add
     Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
     void ForceChangeToGREEN(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
     void ForceChangeToBLUE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
     void ForceChangeToWHITE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
-    void ForceChangeToBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
+    void ForceChangeToBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic
+    void ForceChangeToBLUATRE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
     void TryTransitionThrowSETRED(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
     void TryTransitionThrowSETGREEN(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
     void TryTransitionThrowSETBLUE(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
-    void TryTransitionThrowSETBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\t\n\n}\n"
+    void TryTransitionThrowSETBLACK(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
+    void TryTransitionThrowSPECIALCOLOR(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\tpublic 
+    void TryTransitionThrowCLASSICCOLOR(){\n\t//Add Your code here\n\tthrow new System.NotImplementedException();\n\t}\n\t\n\n}\n"
 --- !u!4 &608852228
 Transform:
   m_ObjectHideFlags: 0
@@ -258,6 +438,7 @@ GameObject:
   - component: {fileID: 706607653}
   - component: {fileID: 706607652}
   - component: {fileID: 706607651}
+  - component: {fileID: 706607654}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -282,8 +463,8 @@ Camera:
   m_GameObject: {fileID: 706607650}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -330,6 +511,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &706607654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706607650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1 &780283627
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,10 +585,10 @@ MonoBehaviour:
   m_lastForced:
     m_fromStateIndex: 0
     m_toStateIndex: 0
-  m_listentToStateEntering:
+  m_listenToStateEntering:
     m_observeStateId: 0
     m_isEnteredState: 0
-  m_listentToStateExiting:
+  m_listenToStateExiting:
     m_observeStateId: 0
     m_isExitingState: 0
   m_listenToMutipleOrigneEntering:
@@ -404,9 +617,22 @@ MonoBehaviour:
   m_stateChangeStruct:
     m_PersistentCalls:
       m_Calls: []
-  m_stateChangeFsmEnum:
+  m_stateChangeWithSourceStruct:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2113884259}
+        m_TargetAssemblyTypeName: Eloi.AbstractStateChangeToEnumMono`1[[S_RGBSTATEMACHINE,
+          Assembly-CSharp
+        m_MethodName: NotifyStateChangeWithSource
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &780283629
 Transform:
   m_ObjectHideFlags: 0
@@ -553,6 +779,128 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &992944232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992944235}
+  - component: {fileID: 992944234}
+  - component: {fileID: 992944233}
+  m_Layer: 0
+  m_Name: StateCountHistoryMono
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &992944233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992944232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e561e66b8fc49f4f89c6d6cc0a4f249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_countState:
+    m_collection: []
+--- !u!114 &992944234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992944232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b5379025101264b83e78bd522e60a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_countState:
+    m_collection: []
+--- !u!4 &992944235
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992944232}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 460.5, y: 259.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &992987811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 992987814}
+  - component: {fileID: 992987813}
+  - component: {fileID: 992987812}
+  m_Layer: 0
+  m_Name: StateChangeHistoryMono
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &992987812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992987811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2df71f69d2bb3a46bc4436978ff1f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_history:
+    m_queue: 
+    m_maxSize: 10
+--- !u!114 &992987813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992987811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 090a5cdb68b789c4e8c1d65e0fa6a7b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_history:
+    m_queue: 
+    m_maxSize: 10
+--- !u!4 &992987814
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992987811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 460.5, y: 259.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1101174235
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +994,519 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101174235}
+  m_CullTransparentMesh: 1
+--- !u!1 &1117767919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1117767920}
+  - component: {fileID: 1117767921}
+  m_Layer: 0
+  m_Name: 'From N to Enter '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1117767920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117767919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1739383189}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1117767921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117767919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f38541640a275d4d8e24c94dc1e7129, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_observed: 2
+  m_fromTracked: 0005
+  m_enterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 'N To Enter '
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_enterEnumEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: N To Enter  Generic
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_behindTheScene:
+    m_enter:
+      m_observeStateId: 2
+      m_fromStateIds: 0005
+      m_isEnteredState: 0
+    m_previous: 0
+    m_current: 0
+--- !u!1 &1212623416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212623417}
+  - component: {fileID: 1212623420}
+  - component: {fileID: 1212623419}
+  - component: {fileID: 1212623418}
+  m_Layer: 5
+  m_Name: Image (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1212623417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212623416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1716733477}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1212623418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212623416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fdfdf6723798864da1362a8c40eb2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_imgageToAffect: {fileID: 1212623419}
+  m_colorCurrent: 0
+  m_colorPrevious: 0
+  m_source: {fileID: 0}
+  m_stateReceived: 0
+--- !u!114 &1212623419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212623416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1212623420
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212623416}
+  m_CullTransparentMesh: 1
+--- !u!1 &1381993030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1381993031}
+  - component: {fileID: 1381993032}
+  m_Layer: 0
+  m_Name: Exit To N
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1381993031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381993030}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 194.96887, y: -51.92096, z: 5.5906067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1739383189}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1381993032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381993030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b00bccf072571478d468d134c7cddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_observed: 0
+  m_toTracked: 01
+  m_exitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Exit To N
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_exitEnumEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Exit To N Generic
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_behindTheScene:
+    m_exit:
+      m_observeStateId: 0
+      m_toStateIds: 01
+      m_isExitingState: 0
+    m_previous: 0
+    m_current: 0
+--- !u!1 &1462193398
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462193399}
+  - component: {fileID: 1462193400}
+  - component: {fileID: 1462193401}
+  m_Layer: 0
+  m_Name: Any to State Enter Exit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462193399
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462193398}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1739383189}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1462193400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462193398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2958f2f19ddbf24fb1df39e13b7cbbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_enterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Any Enter Byte
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_exitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Any Exit Byte
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_behindTheScene:
+    m_enterPassif:
+      m_observeStateId: 0
+      m_isEnteredState: 0
+    m_enterExit:
+      m_observeStateId: 0
+      m_isExitingState: 0
+--- !u!114 &1462193401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462193398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad6594915f551742a23d5c1b9f3e0fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_observed: 5
+  m_enterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Any Enter
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_enterEnumEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Any Enter Generic
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_exitEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Any Exit
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_exitEnumEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1739383190}
+        m_TargetAssemblyTypeName: DebugLogMono, be.eloistree.generaltoolbox
+        m_MethodName: Log
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Any Exit generic
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_behindTheScene:
+    m_enter:
+      m_observeStateId: 5
+      m_isEnteredState: 0
+    m_exit:
+      m_observeStateId: 5
+      m_isExitingState: 0
+    m_previous: 0
+    m_current: 0
+--- !u!1 &1575498934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1575498935}
+  - component: {fileID: 1575498938}
+  - component: {fileID: 1575498937}
+  - component: {fileID: 1575498936}
+  m_Layer: 5
+  m_Name: Image (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1575498935
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575498934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1716733477}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1575498936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575498934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fdfdf6723798864da1362a8c40eb2c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_imgageToAffect: {fileID: 1575498937}
+  m_colorCurrent: 0
+  m_colorPrevious: 0
+  m_source: {fileID: 0}
+  m_stateReceived: 0
+--- !u!114 &1575498937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575498934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1575498938
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575498934}
   m_CullTransparentMesh: 1
 --- !u!1 &1716733473
 GameObject:
@@ -741,6 +1602,9 @@ RectTransform:
   m_Children:
   - {fileID: 1101174236}
   - {fileID: 1889690363}
+  - {fileID: 591615915}
+  - {fileID: 1575498935}
+  - {fileID: 1212623417}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -762,12 +1626,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 5
+    m_Right: 5
+    m_Top: 5
+    m_Bottom: 5
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 10
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -775,6 +1639,53 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!1 &1739383188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739383189}
+  - component: {fileID: 1739383190}
+  m_Layer: 0
+  m_Name: ListenToStateMachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739383189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739383188}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 265.53113, y: 311.42096, z: -5.5906067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 164262546}
+  - {fileID: 1462193399}
+  - {fileID: 1117767920}
+  - {fileID: 1381993031}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739383190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739383188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa0c53c9b29a88b479ff4cca2d8a690e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802091211
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,6 +1883,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2113884258}
   - component: {fileID: 2113884257}
+  - component: {fileID: 2113884261}
+  - component: {fileID: 2113884259}
   m_Layer: 0
   m_Name: State Change FSM Diffuse
   m_TagString: Untagged
@@ -1007,9 +1920,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 992987813}
+        m_TargetAssemblyTypeName: StateChangeHistoryMono, Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_stateChangeStruct:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2113884259}
+        m_TargetAssemblyTypeName: Demo_StateChangeToEnum, Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2113884258
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,3 +1961,177 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2113884259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113884256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f361e14df79d456489ddde245f390d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_eventRGB:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1575498936}
+        m_TargetAssemblyTypeName: ColorStateChangeListenerFromEnumMono, Assembly-CSharp
+        m_MethodName: NotifyStateChangeWithSource
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_eventRGBWithSource:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1212623418}
+        m_TargetAssemblyTypeName: ColorStateChangeListenerFromEnumMono, Assembly-CSharp
+        m_MethodName: NotifyStateChangeWithSource
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1462193401}
+        m_TargetAssemblyTypeName: SFSMChangeListener_AnyEnterExit`1[[S_RGBSTATEMACHINE,
+          Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1117767921}
+        m_TargetAssemblyTypeName: SFSMChangeListener_FromToEnter`1[[S_RGBSTATEMACHINE,
+          Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1381993032}
+        m_TargetAssemblyTypeName: SFSMChangeListener_ExitTo`1[[S_RGBSTATEMACHINE,
+          Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 992987812}
+        m_TargetAssemblyTypeName: StateChangeHistoryMono`1[[S_RGBSTATEMACHINE, Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 992944233}
+        m_TargetAssemblyTypeName: SFSMStateCountHistoryGenericMono`1[[S_RGBSTATEMACHINE,
+          Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2113884261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113884256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffeaac90ee1f8004eb362231c2be5da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_stateChangeEmitter: {fileID: 780283627}
+  m_stateChangeBytes:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 591615916}
+        m_TargetAssemblyTypeName: ColorStateChangeListenerFromEnumMono, Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2113884259}
+        m_TargetAssemblyTypeName: Eloi.AbstractStateChangeToEnumMono`1[[S_RGBSTATEMACHINE,
+          Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1462193400}
+        m_TargetAssemblyTypeName: SFSMChangeListener_AnyEnterExit, Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 992944234}
+        m_TargetAssemblyTypeName: SFSMStateCountHistoryMono, Assembly-CSharp
+        m_MethodName: NotifyStateChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_stateChangeStruct:
+    m_PersistentCalls:
+      m_Calls: []

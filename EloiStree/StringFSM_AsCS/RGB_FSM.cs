@@ -1,6 +1,6 @@
 
-public enum S_RGBSTATEMACHINE : byte { RED = 0, GREEN = 1, BLUE = 2, WHITE = 3, BLACK = 4 }
-public enum T_RGBSTATEMACHINE : byte { SETRED_GREEN_RED = 0, SETRED_RED_RED = 1, SETGREEN_BLUE_GREEN = 2, SETGREEN_RED_GREEN = 3, SETBLUE_RED_BLUE = 4, SETBLUE_GREEN_BLUE = 5, SETBLUE_BLACK_BLUE = 6, SETGREEN_BLACK_GREEN = 7, SETRED_BLACK_RED = 8, SETBLACK_WHITE_BLACK = 9 }
+public enum S_RGBSTATEMACHINE : byte { RED = 0, GREEN = 1, BLUE = 2, WHITE = 3, BLACK = 4, BLUATRE = 5 }
+public enum T_RGBSTATEMACHINE : byte { SETRED_GREEN_RED = 0, SETRED_RED_RED = 1, SETGREEN_BLUE_GREEN = 2, SETGREEN_RED_GREEN = 3, SETBLUE_RED_BLUE = 4, SETBLUE_GREEN_BLUE = 5, SETBLUE_BLACK_BLUE = 6, SETGREEN_BLACK_GREEN = 7, SETRED_BLACK_RED = 8, SETBLACK_WHITE_BLACK = 9, SPECIALCOLOR_BLUE_BLUATRE = 10, CLASSICCOLOR_BLUATRE_BLUE = 11 }
 
 //--------------------
 
@@ -13,12 +13,15 @@ public interface SFSM_IRGBSTATEMACHINE
 	void ForceChangeToBLUE();
 	void ForceChangeToWHITE();
 	void ForceChangeToBLACK();
+	void ForceChangeToBLUATRE();
 
 
 	void TryTransitionThrowSETRED();
 	void TryTransitionThrowSETGREEN();
 	void TryTransitionThrowSETBLUE();
 	void TryTransitionThrowSETBLACK();
+	void TryTransitionThrowSPECIALCOLOR();
+	void TryTransitionThrowCLASSICCOLOR();
 
 
 }
@@ -35,6 +38,7 @@ public partial class SFSM
 	public const byte S_RGBSTATEMACHINE_BLUE = 2;
 	public const byte S_RGBSTATEMACHINE_WHITE = 3;
 	public const byte S_RGBSTATEMACHINE_BLACK = 4;
+	public const byte S_RGBSTATEMACHINE_BLUATRE = 5;
 	public const byte T_RGBSTATEMACHINE_SETRED_GREEN_RED = 0;
 	public const byte T_RGBSTATEMACHINE_SETRED_RED_RED = 1;
 	public const byte T_RGBSTATEMACHINE_SETGREEN_BLUE_GREEN = 2;
@@ -45,6 +49,8 @@ public partial class SFSM
 	public const byte T_RGBSTATEMACHINE_SETGREEN_BLACK_GREEN = 7;
 	public const byte T_RGBSTATEMACHINE_SETRED_BLACK_RED = 8;
 	public const byte T_RGBSTATEMACHINE_SETBLACK_WHITE_BLACK = 9;
+	public const byte T_RGBSTATEMACHINE_SPECIALCOLOR_BLUE_BLUATRE = 10;
+	public const byte T_RGBSTATEMACHINE_CLASSICCOLOR_BLUATRE_BLUE = 11;
 }
 //*/
 
@@ -60,6 +66,7 @@ public partial class SFSM
 		public const byte S_BLUE = 2;
 		public const byte S_WHITE = 3;
 		public const byte S_BLACK = 4;
+		public const byte S_BLUATRE = 5;
 		public const byte T_SETRED_GREEN_RED = 0;
 		public const byte T_SETRED_RED_RED = 1;
 		public const byte T_SETGREEN_BLUE_GREEN = 2;
@@ -70,6 +77,8 @@ public partial class SFSM
 		public const byte T_SETGREEN_BLACK_GREEN = 7;
 		public const byte T_SETRED_BLACK_RED = 8;
 		public const byte T_SETBLACK_WHITE_BLACK = 9;
+		public const byte T_SPECIALCOLOR_BLUE_BLUATRE = 10;
+		public const byte T_CLASSICCOLOR_BLUATRE_BLUE = 11;
 	}
 }
 //*/
@@ -105,6 +114,11 @@ public class SFSM_RGBSTATEMACHINE : SFSM_IRGBSTATEMACHINE
 		//Add Your code here
 		throw new System.NotImplementedException();
 	}
+	public void ForceChangeToBLUATRE()
+	{
+		//Add Your code here
+		throw new System.NotImplementedException();
+	}
 	public void TryTransitionThrowSETRED()
 	{
 		//Add Your code here
@@ -121,6 +135,16 @@ public class SFSM_RGBSTATEMACHINE : SFSM_IRGBSTATEMACHINE
 		throw new System.NotImplementedException();
 	}
 	public void TryTransitionThrowSETBLACK()
+	{
+		//Add Your code here
+		throw new System.NotImplementedException();
+	}
+	public void TryTransitionThrowSPECIALCOLOR()
+	{
+		//Add Your code here
+		throw new System.NotImplementedException();
+	}
+	public void TryTransitionThrowCLASSICCOLOR()
 	{
 		//Add Your code here
 		throw new System.NotImplementedException();
