@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.eloistree.stringfinitestatemachinedemo",                              
+  "displayName": "String Finite State Machine Demo",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2021_09_24_FromWebStateMachineUnityPackageDemo",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
